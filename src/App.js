@@ -1,9 +1,12 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Slide1 from './components/Slide1';
+import Router from './components/routing/Router';
 
 function App() {
   return (
-    <Slide1 />
+    <BrowserRouter>
+      <Router></Router>
+    </BrowserRouter>
   );
 }
 

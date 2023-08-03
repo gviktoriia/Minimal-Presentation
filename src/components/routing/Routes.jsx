@@ -1,0 +1,10 @@
+export const first_page = "/1";
+export const second_page = "/2";
+export const third_page = "/3";
+export const forth_page = "/4";
+export const fifth_page = "/5";
+export const sixth_page = "/6";
+export const seventh_page = "/7";
+export const eighth_page = "/8";
+export const nineth_page = "/9";
+export const tenth_page = "/20";
