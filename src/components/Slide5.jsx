@@ -1,21 +1,23 @@
-import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import { first_page, third_page } from "./routing/Routes";
 import { useNavigate } from "react-router-dom";
+import { forth_page, sixth_page } from "./routing/Routes";
+import { Box, Grid, Typography } from "@mui/material";
 import RemoveIcon from "@mui/icons-material/Remove";
 
-const imageURL =
-  "https://images.unsplash.com/photo-1594864978403-131542bc6e69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80";
+const tableImageURL =
+  "https://images.unsplash.com/photo-1507878866276-a947ef722fee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80";
+const abstractImageURL =
+  "https://images.squarespace-cdn.com/content/v1/5bcf1247a09a7e286604e915/1581440670088-T0ZKJ2REU4XS4WLVQCZT/1.jpg?format=1500w";
 
-function Slide2() {
+function Slide5() {
   const navigate = useNavigate();
 
   const handleArrowKeyPress = (event) => {
     document.addEventListener("keydown", (event) => {
       if (event.keyCode === 39) {
-        navigate(third_page);
+        navigate(sixth_page);
       } else if (event.keyCode === 37) {
-        navigate(first_page);
+        navigate(forth_page);
       }
     });
   };
@@ -54,7 +56,7 @@ function Slide2() {
             fontFamily: "Quicksand",
             fontSize: "60px",
             fontWeight: "700",
-            width: "464px",
+            width: "504px",
             textAlign: "left",
             lineHeight: "normal",
           }}
@@ -79,10 +81,19 @@ function Slide2() {
       </Grid>
       <Grid item xs={4} marginTop="-80px">
         <Box
-          height="620px"
+          height="50vh"
           maxWidth="500px"
           sx={{
-            backgroundImage: `url(${imageURL})`,
+            backgroundImage: `url(${tableImageURL})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        ></Box>
+        <Box
+          height="50vh"
+          maxWidth="500px"
+          sx={{
+            backgroundImage: `url(${abstractImageURL})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
@@ -97,11 +108,11 @@ function Slide2() {
             color: "#E3E6EC",
           }}
         >
-          02
+          05
         </Typography>
       </Grid>
     </Grid>
   );
 }
 
-export default Slide2;
+export default Slide5;

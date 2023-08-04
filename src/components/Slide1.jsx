@@ -54,7 +54,7 @@ function Slide1() {
               color: "#E3E6EC",
               fontFamily: "Quicksand",
               fontSize: "25px",
-              fontWeight: "400px",
+              fontWeight: "400",
               paddingLeft: "240px",
               paddingTop: "136px",
             }}
@@ -66,7 +66,7 @@ function Slide1() {
               color: "#FFFFFF",
               fontFamily: "Quicksand",
               fontSize: "60px",
-              fontWeight: "700px",
+              fontWeight: "700",
               maxWidth: "467px",
               textAlign: "left",
               paddingLeft: "240px",
@@ -81,7 +81,7 @@ function Slide1() {
           sx={{
             fontFamily: "Quicksand",
             fontSize: "60px",
-            fontWeight: "bold",
+            fontWeight: "700",
             color: "#E3E6EC",
           }}
         >
