@@ -7,4 +7,6 @@ export const sixth_page = "/6";
 export const seventh_page = "/7";
 export const eighth_page = "/8";
 export const nineth_page = "/9";
-export const tenth_page = "/20";
+export const tenth_page = "/10";
+export const eleventh_page = "/11";
+export const twelfth_page = "/12";

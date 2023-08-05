@@ -1,8 +1,11 @@
-import { Box, Grid, LinearProgress, Typography } from "@mui/material";
+import { Grid, LinearProgress, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { forth_page, second_page, third_page } from "./routing/Routes";
-import RemoveIcon from "@mui/icons-material/Remove";
+import { forth_page, second_page } from "../routing/Routes";
+import TitleText from "../Elements/TitleText";
+import MainText from "../Elements/MainText";
+import PageNumber from "../Elements/PageNumber";
+import ImageBox from "../Elements/ImageBox";
 
 const imageURL =
   "https://images.unsplash.com/photo-1588599830253-6ceef61929c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80";
@@ -29,39 +32,11 @@ function Slide3() {
       spacing={1}
     >
       <Grid item xs={5} marginLeft="-80px">
-        <Box
-          height="100vh"
-          sx={{
-            backgroundImage: `url(${imageURL})`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        ></Box>
+        <ImageBox height="100vh" url={imageURL} />
       </Grid>
       <Grid item xs={6} marginLeft="50px">
-        <Typography
-          sx={{
-            color: "#6A6E77",
-            fontFamily: "Quicksand",
-            fontSize: "25px",
-            fontWeight: "400",
-          }}
-        >
-          Multipurpose Minimal Solution
-        </Typography>
-        <Typography
-          sx={{
-            color: "#1C1F25",
-            fontFamily: "Quicksand",
-            fontSize: "60px",
-            fontWeight: "700",
-            width: "480px",
-            textAlign: "left",
-            lineHeight: "normal",
-          }}
-        >
-          The simplest things are often the truest…
-        </Typography>
+        <TitleText />
+        <MainText color="#1C1F25" align="left" width="500px" />
         <Grid container direction="row" marginTop="80px">
           <Grid item xs={11}>
             <Typography
@@ -132,16 +107,7 @@ function Slide3() {
         />
       </Grid>
       <Grid item xs={1} textAlign="center">
-        <Typography
-          sx={{
-            fontFamily: "Quicksand",
-            fontSize: "60px",
-            fontWeight: "700",
-            color: "#E3E6EC",
-          }}
-        >
-          03
-        </Typography>
+        <PageNumber number="03" />
       </Grid>
     </Grid>
   );
