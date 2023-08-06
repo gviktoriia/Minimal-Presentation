@@ -1,7 +1,8 @@
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import React from "react";
 
 function TextContent() {
+  const theme = useTheme();
   return (
     <Typography
       sx={{
@@ -12,6 +13,9 @@ function TextContent() {
         maxWidth: "549px",
         lineHeight: "45px",
         paddingTop: "6vh",
+        [theme.breakpoints.down("sm")]: {
+          fontSize: "20px",
+        },
       }}
     >
       Dramatically maximize principle-centered models through focused materials.

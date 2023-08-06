@@ -4,16 +4,15 @@ import React from "react";
 function MainText(props) {
   return (
     <Typography
-      sx={{
+      sx={(theme) => ({
         color: props.color,
         fontFamily: "Quicksand",
-        fontSize: "60px",
+        fontSize: { sm: theme.typography.pxToRem(40), md: "60px" },
         fontWeight: "700",
-        width: props.width,
+        maxWidth: { sm: "300px", md: props.maxWidth },
         textAlign: props.align,
-        paddingLeft: props.left,
         lineHeight: "normal",
-      }}
+      })}
     >
       The simplest things are often the truest…
     </Typography>

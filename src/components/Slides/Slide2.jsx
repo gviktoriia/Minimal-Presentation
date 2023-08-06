@@ -30,15 +30,16 @@ function Slide2() {
       onKeyPress={handleArrowKeyPress()}
       container
       direction="row"
+      justifyContent="center"
       alignItems="center"
-      spacing={1}
+      spacing={2}
     >
-      <Grid item height="50px" xs={1} textAlign="center" marginTop="14vh">
+      <Grid item xs={1} textAlign="center" marginTop="14vh">
         <LineIcon />
       </Grid>
-      <Grid item xs={6} marginTop="12vh">
+      <Grid item xs={6} marginTop="12vh" marginBottom="12vh">
         <TitleText />
-        <MainText color="#1C1F25" align="left" width="500px" />
+        <MainText color="#1C1F25" align="left" maxWidth="500px" />
         <TextContent />
       </Grid>
       <Grid item xs={4} marginTop="-80px">

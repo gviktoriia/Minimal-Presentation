@@ -1,7 +1,8 @@
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import React from "react";
 
 function PageNumber(props) {
+  const theme = useTheme();
   return (
     <Typography
       sx={{
@@ -9,6 +10,9 @@ function PageNumber(props) {
         fontSize: "60px",
         fontWeight: "700",
         color: "#E3E6EC",
+        [theme.breakpoints.down("sm")]: {
+          fontSize: '40px',
+        },
       }}
     >
       {props.number}

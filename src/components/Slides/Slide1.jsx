@@ -6,18 +6,19 @@ import LineIcon from "../Elements/LineIcon";
 import TitleText from "../Elements/TitleText";
 import MainText from "../Elements/MainText";
 import PageNumber from "../Elements/PageNumber";
+import { useTheme } from "@mui/material";
 
 const imageURL =
   "https://images.unsplash.com/photo-1497170675097-81fc06e915da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80";
 
 function Slide1() {
   const navigate = useNavigate();
+  const theme = useTheme();
 
   const handleArrowKeyPress = (event) => {
     document.addEventListener("keydown", (event) => {
       if (event.keyCode === 39) {
         navigate(second_page);
-        console.log("Pressed");
       }
     });
   };
@@ -26,19 +27,22 @@ function Slide1() {
     <Grid
       onKeyPress={handleArrowKeyPress()}
       container
-      direction="row"
+      justifyContent="space-between"
       alignItems="center"
       spacing={1}
-      marginTop="10vh"
+      marginTop={theme.spacing(10)}
     >
-      <Grid item height="50px" xs={1} textAlign="center">
+      <Grid item xs={1} textAlign="center">
         <LineIcon />
       </Grid>
       <Grid item xs={10}>
         <Box
-          height="600px"
-          maxWidth="1440px"
           sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "80vh",
             backgroundImage: `url(${imageURL})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -46,8 +50,14 @@ function Slide1() {
             backgroundBlendMode: "multiply",
           }}
         >
-          <TitleText top="16vh" left="240px" />
-          <MainText color="#FFFFFF" left="240px" align="left" width="500px" />
+          <Box
+            sx={{
+              textAlign: "center",
+            }}
+          >
+            <TitleText align="left" />
+            <MainText color="#FFFFFF" align="left" maxWidth="500px" />
+          </Box>
         </Box>
       </Grid>
       <Grid item xs={1} textAlign="center">
