@@ -32,13 +32,13 @@ function Slide4() {
       alignItems="center"
       spacing={1}
     >
-      <Grid item height="50px" xs={1} textAlign="center">
+      <Grid item xs={1} textAlign="center">
         <LineIcon />
       </Grid>
       <Grid item xs={10}>
         <TitleText top="15vh" />
         <MainText color="#1C1F25" align="left" maxWidth="900px" />
-        <Grid container direction="row" spacing={2} marginTop="130px">
+        <Grid container direction="row" spacing={2} marginTop="10vh">
           <Grid item xs={4}>
             <CloudQueueIcon />
             <Typography
@@ -86,7 +86,7 @@ function Slide4() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={1} textAlign="center">
+      <Grid item xs={1} textAlign="center" >
         <PageNumber number="04" />
       </Grid>
     </Grid>

@@ -16,9 +16,9 @@ function Slide3() {
 
   const handleArrowKeyPress = (event) => {
     document.addEventListener("keydown", (event) => {
-      if (event.keyCode === 39) {
+      if (event.key === "ArrowRight") {
         navigate(forth_page);
-      } else if (event.keyCode === 37) {
+      } else if (event.key === "ArrowLeft") {
         navigate(second_page);
       }
     });

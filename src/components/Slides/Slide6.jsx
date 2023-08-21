@@ -13,9 +13,9 @@ function Slide6() {
 
   const handleArrowKeyPress = (event) => {
     document.addEventListener("keydown", (event) => {
-      if (event.keyCode === 39) {
+      if (event.key === "ArrowRight") {
         navigate(seventh_page);
-      } else if (event.keyCode === 37) {
+      } else if (event.key === "ArrowLeft") {
         navigate(fifth_page);
       }
     });
@@ -29,17 +29,17 @@ function Slide6() {
       alignItems="center"
       spacing={1}
     >
-      <Grid item height="50px" xs={1} textAlign="center" marginTop="14vh">
+      <Grid item xs={1} textAlign="center" >
         <LineIcon />
       </Grid>
       <Grid item xs={5} marginTop="12vh">
         <TitleText />
-        <MainText color="#1C1F25" align="left" width="500px" />
+        <MainText color="#1C1F25" align="left" maxWidth="500px" />
       </Grid>
-      <Grid item xs={5} marginTop="20vh">
+      <Grid item xs={5} marginTop="16vh">
         <Advantages />
       </Grid>
-      <Grid item xs={1} textAlign="center" marginTop="14vh">
+      <Grid item xs={1} textAlign="center" >
         <PageNumber number="06" />
       </Grid>
     </Grid>

@@ -13,7 +13,6 @@ const sectionData = [
       "https://images.unsplash.com/photo-1454782767667-13a17aac30c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=872&q=80",
     width: "100%",
     height: "54vh",
-    x: "-200px",
   },
   {
     number: "02",
@@ -36,9 +35,9 @@ function Slide10() {
 
   const handleArrowKeyPress = (event) => {
     document.addEventListener("keydown", (event) => {
-      if (event.keyCode === 39) {
+      if (event.key === "ArrowRight") {
         navigate(eleventh_page);
-      } else if (event.keyCode === 37) {
+      } else if (event.key === "ArrowLeft") {
         navigate(nineth_page);
       }
     });
@@ -52,7 +51,7 @@ function Slide10() {
       alignItems="center"
       spacing={1}
     >
-      <Grid item xs={1} height="50px" textAlign="center" marginTop="14vh">
+      <Grid item xs={1} textAlign="center">
         <LineIcon />
       </Grid>
       <Grid item xs={10}>
@@ -64,7 +63,7 @@ function Slide10() {
           ))}
         </Grid>
       </Grid>
-      <Grid item xs={1} textAlign="center" marginTop="14vh">
+      <Grid item xs={1} textAlign="center">
         <PageNumber number="10" />
       </Grid>
     </Grid>

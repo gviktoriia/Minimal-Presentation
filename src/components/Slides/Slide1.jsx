@@ -17,7 +17,7 @@ function Slide1() {
 
   const handleArrowKeyPress = (event) => {
     document.addEventListener("keydown", (event) => {
-      if (event.keyCode === 39) {
+      if (event.key === "ArrowRight") {
         navigate(second_page);
       }
     });

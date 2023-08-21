@@ -17,9 +17,9 @@ function Slide2() {
 
   const handleArrowKeyPress = (event) => {
     document.addEventListener("keydown", (event) => {
-      if (event.keyCode === 39) {
+      if (event.key === "ArrowRight") {
         navigate(third_page);
-      } else if (event.keyCode === 37) {
+      } else if (event.key === "ArrowLeft") {
         navigate(first_page);
       }
     });
@@ -34,7 +34,7 @@ function Slide2() {
       alignItems="center"
       spacing={2}
     >
-      <Grid item xs={1} textAlign="center" marginTop="14vh">
+      <Grid item xs={1} textAlign="center">
         <LineIcon />
       </Grid>
       <Grid item xs={6} marginTop="12vh" marginBottom="12vh">
@@ -45,7 +45,7 @@ function Slide2() {
       <Grid item xs={4} marginTop="-80px">
         <ImageBox height="620px" maxWidth="500px" url={imageURL} />
       </Grid>
-      <Grid item xs={1} textAlign="center" marginTop="14vh">
+      <Grid item xs={1} textAlign="center" >
         <PageNumber number="02" />
       </Grid>
     </Grid>

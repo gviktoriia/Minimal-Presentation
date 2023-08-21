@@ -12,9 +12,9 @@ function Slide9() {
 
   const handleArrowKeyPress = (event) => {
     document.addEventListener("keydown", (event) => {
-      if (event.keyCode === 39) {
+      if (event.key === "ArrowRight") {
         navigate(tenth_page);
-      } else if (event.keyCode === 37) {
+      } else if (event.key === "ArrowLeftt") {
         navigate(eighth_page);
       }
     });
@@ -28,7 +28,7 @@ function Slide9() {
       alignItems="center"
       spacing={1}
     >
-      <Grid item xs={1} height="50px" textAlign="center" marginTop="14vh">
+      <Grid item xs={1} textAlign="center">
         <LineIcon />
       </Grid>
       <Grid item xs={4} height="100vh">
@@ -90,7 +90,7 @@ function Slide9() {
           </Typography>
         </Box>
       </Grid>
-      <Grid item xs={1} textAlign="center" marginTop="14vh">
+      <Grid item xs={1} textAlign="center">
         <PageNumber number="09" />
       </Grid>
     </Grid>

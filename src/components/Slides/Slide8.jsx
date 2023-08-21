@@ -14,9 +14,9 @@ function Slide8() {
 
   const handleArrowKeyPress = (event) => {
     document.addEventListener("keydown", (event) => {
-      if (event.keyCode === 39) {
+      if (event.key === "ArrowRight") {
         navigate(nineth_page);
-      } else if (event.keyCode === 37) {
+      } else if (event.key === "ArrowLeft") {
         navigate(seventh_page);
       }
     });
@@ -29,7 +29,7 @@ function Slide8() {
       alignItems="center"
       spacing={1}
     >
-      <Grid item height="50px" xs={1} textAlign="center">
+      <Grid item xs={1} textAlign="center">
         <LineIcon />
       </Grid>
       <Grid item xs={4} marginRight="6%">
@@ -41,7 +41,7 @@ function Slide8() {
       </Grid>
       <Grid item xs={5}>
         <TitleText />
-        <MainText />
+        <MainText color="#1C1F25" align="left" maxWidth="500px" />
         <Grid container direction="row" columnSpacing={10} marginTop="12vh">
           <Grid item>
             <DesignsNumber num="80" work="Design Sprint" />

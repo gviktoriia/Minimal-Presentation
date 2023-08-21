@@ -12,9 +12,9 @@ function Slide11() {
 
   const handleArrowKeyPress = (event) => {
     document.addEventListener("keydown", (event) => {
-      if (event.keyCode === 39) {
+      if (event.key === "ArrowRight") {
         navigate(twelfth_page);
-      } else if (event.keyCode === 37) {
+      } else if (event.key === "ArrowLeft") {
         navigate(tenth_page);
       }
     });
@@ -41,7 +41,7 @@ function Slide11() {
           }}
         ></Box>
       </Grid>
-      <Grid item xs={1} height="50px" textAlign="center" marginTop="14vh">
+      <Grid item xs={1} textAlign="center" >
         <LineIcon />
       </Grid>
       <Grid item xs={4} justifyContent="center" marginTop="10vh">
@@ -59,7 +59,7 @@ function Slide11() {
           </Grid>
         ))}
       </Grid>
-      <Grid item xs={1} textAlign="center" marginTop="14vh">
+      <Grid item xs={1} textAlign="center" >
         <PageNumber number="11" />
       </Grid>
     </Grid>
